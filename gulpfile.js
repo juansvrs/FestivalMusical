@@ -1,7 +1,7 @@
 const{src,dest,watch} = require("gulp");
 const sass= require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
-
+//Hola
 function css(done){
     src('src/scss/**/*.scss').
         pipe(plumber()).
@@ -17,7 +17,7 @@ function tarea(done){
     console.log("Mi primer tarea aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     done();
 }
-
+//hola
 
 exports.tarea=tarea;
 exports.css=css;
