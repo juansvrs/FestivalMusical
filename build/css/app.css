@@ -310,11 +310,12 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-padding-top: 0rem;
 }
 
 *,
-*::before,
-* after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -322,10 +323,17 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fijar-body {
+  overflow: hidden;
+}
+body.body-scroll {
+  padding-top: 8.6rem;
+}
 
 p {
   font-size: 2rem;
   color: #000000;
+  line-height: 1.5;
 }
 
 .contenedor {
@@ -451,4 +459,34 @@ img {
   font-weight: 600;
   font-size: 2.4rem;
   margin: 0;
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .contenido-festival {
+    margin-top: 0;
+  }
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival .fecha {
+  color: #F53756;
+  font-weight: 700;
 }
